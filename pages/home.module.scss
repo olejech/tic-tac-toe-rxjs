@@ -1,0 +1,65 @@
+.app {
+  display: flex;
+  background: #071c28;
+  height: 100vh;
+  color: #c1e0ff;
+}
+
+.container {
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px;
+  min-height: 600px;
+  margin: auto;
+  background-color: #0070f3;
+  border-radius: 2rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 178px;
+  border: 1px solid #c1e0ff;
+}
+
+.cross {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 50px;
+    width: 5px;
+    background-color: #c1e0ff;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+.zero {
+  height: 50px;
+  width: 50px;
+  border: 5px solid #c1e0ff;
+  border-radius: 50%;
+}
