@@ -1,0 +1,42 @@
+.field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 178px;
+  border: 1px solid #c1e0ff;
+
+  &_isDisable {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.cross {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 50px;
+    width: 5px;
+    background-color: #c1e0ff;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+.zero {
+  height: 50px;
+  width: 50px;
+  border: 5px solid #c1e0ff;
+  border-radius: 50%;
+}
